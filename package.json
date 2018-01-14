@@ -1,0 +1,27 @@
+{
+    "name": "google-fcm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "ff.pang@qq.com",
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "",
+    "dependencies": {
+        "redlock": "^3.1.0",
+        "request": "^2.82.0",
+        "request-promise": "^4.2.2",
+        "restify": "^5.0.0",
+        "restify-cors-middleware": "^1.0.1",
+        "restify-errors": "^4.3.0"
+    },
+    "devDependencies": {}
+}
