@@ -26,7 +26,8 @@ Service.sendMessage = (token)=> {
                 }
             },
             headers: {
-                'Authorization': 'key='+config.key
+                'Authorization': 'key='+config.key,
+                'Content-Type': 'application/json'
             },
             json: true // Automatically stringifies the body to JSON
         };
