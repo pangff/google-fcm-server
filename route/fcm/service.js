@@ -12,7 +12,7 @@ Service.sendMessage = (token)=> {
             method: 'POST',
             uri: 'https://fcm.googleapis.com/fcm/send',
             body: {
-                "to": "295468902820",
+                "to": token,
                 "data": {
                     title: "新闻标题",
                     body: "新闻正文",
@@ -25,7 +25,7 @@ Service.sendMessage = (token)=> {
             },
             json: true // Automatically stringifies the body to JSON
         };
-
+        console.log(options)
         rp(options).then((body)=> {
             console.log('message', body)
         })
