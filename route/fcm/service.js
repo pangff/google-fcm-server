@@ -17,7 +17,13 @@ Service.sendMessage = (token)=> {
                     title: "新闻标题",
                     body: "新闻正文",
                     icon: "https://www.baidu.com/img/bd_logo1.png",
-                    click_action: "https://www.baidu.com",
+                    click_action: "https://www.baidu.com"
+                },
+                notification:{
+                    title: "新闻标题",
+                    body: "新闻正文",
+                    icon: "https://www.baidu.com/img/bd_logo1.png",
+                    click_action: "https://www.baidu.com"
                 }
             },
             headers: {
