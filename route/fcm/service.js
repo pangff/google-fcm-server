@@ -1,6 +1,5 @@
 'use strict';
 const path = require('path');
-const axios = require('axios');
 const Service = module.exports = {};
 const request = require('request');
 const rp = require('request-promise');
