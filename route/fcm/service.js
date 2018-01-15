@@ -10,7 +10,7 @@ const webpush = require('web-push');
 // VAPID keys should only be generated only once.
 const vapidKeys = webpush.generateVAPIDKeys();
 
-webpush.setGCMAPIKey('AIzaSyDMYQrBAndglTTqPtooGcU8FoEFxDdH7DU');
+webpush.setGCMAPIKey(config.key);
 webpush.setVapidDetails(
     'mailto:jiangxin@feawin.com',
     vapidKeys.publicKey,
