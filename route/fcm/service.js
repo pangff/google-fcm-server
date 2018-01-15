@@ -18,7 +18,7 @@ webpush.setVapidDetails(
 );
 
 Service.sendVapIdMessage=(pushSubscription)=>{
-    webpush.sendNotification(pushSubscription, 'Your Push Payload Text');
+    return webpush.sendNotification(pushSubscription, 'Your Push Payload Text');
 }
 
 
