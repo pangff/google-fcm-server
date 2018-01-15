@@ -25,15 +25,28 @@ Service.sendVapIdMessage=(pushSubscription)=>{
         icon: "https://www.baidu.com/img/bd_logo1.png",
         click_action: "https://www.baidu.com"
     })
-    return webpush.sendNotification(pushSubscription,payload,{
-        headers: {
-            'Authorization': 'key='+config.key,
-            'Content-Type': 'application/json'
-        }
-    }).catch((e)=>{
-        console.error(e)
-        return Promise.reject(e);
-    })
+    if(pushSubscription.delay){
+        setTimeout(()=>{
+            webpush.sendNotification(pushSubscription,payload,{
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).catch((e)=>{
+                console.error(e)
+            })
+        },parseInt(pushSubscription.delay))
+        return new Promise.resolve({"status":"success",delay:pushSubscription.delay})
+    }else{
+        return  webpush.sendNotification(pushSubscription,payload,{
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).catch((e)=>{
+            console.error(e)
+            return Promise.reject(e);
+        })
+    }
+
 }
 
 
