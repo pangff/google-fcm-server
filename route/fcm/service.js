@@ -35,7 +35,7 @@ Service.sendVapIdMessage=(pushSubscription)=>{
                 console.error(e)
             })
         },parseInt(pushSubscription.delay))
-        return new Promise.resolve({"status":"success",delay:pushSubscription.delay})
+        return  Promise.resolve({"status":"success",delay:pushSubscription.delay})
     }else{
         return  webpush.sendNotification(pushSubscription,payload,{
             headers: {
