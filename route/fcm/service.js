@@ -19,7 +19,12 @@ webpush.setVapidDetails(
 
 Service.sendVapIdMessage=(pushSubscription)=>{
     console.log(pushSubscription)
-    return webpush.sendNotification(pushSubscription, 'Your Push Payload Text',{
+    let payload = JSON.stringify({
+        title:"新闻标题",
+        body: "新闻正文",
+        icon: "https://www.baidu.com/img/bd_logo1.png"
+    })
+    return webpush.sendNotification(pushSubscription,payload,{
         headers: {
             'Authorization': 'key='+config.key,
             'Content-Type': 'application/json'
