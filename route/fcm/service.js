@@ -5,6 +5,23 @@ const request = require('request');
 const rp = require('request-promise');
 const config = require('../../config');
 
+const webpush = require('web-push');
+
+// VAPID keys should only be generated only once.
+const vapidKeys = webpush.generateVAPIDKeys();
+
+webpush.setGCMAPIKey('AIzaSyDMYQrBAndglTTqPtooGcU8FoEFxDdH7DU');
+webpush.setVapidDetails(
+    'jiangxin@feawin.com',
+    vapidKeys.publicKey,
+    vapidKeys.privateKey
+);
+
+Service.sendVapIdMessage=(pushSubscription)=>{
+    webpush.sendNotification(pushSubscription, 'Your Push Payload Text');
+}
+
+
 Service.sendMessage = (token)=> {
 
     setTimeout(()=> {
