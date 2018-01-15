@@ -12,7 +12,7 @@ const vapidKeys = webpush.generateVAPIDKeys();
 
 webpush.setGCMAPIKey('AIzaSyDMYQrBAndglTTqPtooGcU8FoEFxDdH7DU');
 webpush.setVapidDetails(
-    'jiangxin@feawin.com',
+    'mailto:jiangxin@feawin.com',
     vapidKeys.publicKey,
     vapidKeys.privateKey
 );
