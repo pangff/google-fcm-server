@@ -10,7 +10,7 @@ Service.sendMessage = (token)=> {
     setTimeout(()=> {
         var options = {
             method: 'POST',
-            uri: 'https://fcm.googleapis.com/fcm/send',
+            uri: 'https://android.googleapis.com/fcm/send',
             body: {
                 "to": token,
                 "data": {
@@ -27,7 +27,7 @@ Service.sendMessage = (token)=> {
             },
             headers: {
                 'Authorization': 'key='+config.key,
-                'content-type': 'application/json'
+                'Content-Type': 'application/json'
             },
             json: true // Automatically stringifies the body to JSON
         };
