@@ -22,7 +22,8 @@ Service.sendVapIdMessage=(pushSubscription)=>{
     let payload = JSON.stringify({
         title:"新闻标题",
         body: "新闻正文",
-        icon: "https://www.baidu.com/img/bd_logo1.png"
+        icon: "https://www.baidu.com/img/bd_logo1.png",
+        click_action: "https://www.baidu.com"
     })
     return webpush.sendNotification(pushSubscription,payload,{
         headers: {
