@@ -12,8 +12,8 @@ Service.sendMessage = (token)=> {
             method: 'POST',
             uri: 'https://fcm.googleapis.com/fcm/send',
             body: {
-                "to": token,
-                "data": {
+                to: token,
+                data: {
                     title: "新闻标题",
                     body: "新闻正文",
                     icon: "https://www.baidu.com/img/bd_logo1.png",
