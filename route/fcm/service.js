@@ -10,7 +10,7 @@ Service.sendMessage = (token)=> {
     setTimeout(()=> {
         var options = {
             method: 'POST',
-            uri: 'https://android.googleapis.com/fcm/send',
+            uri: 'https://fcm.googleapis.com/fcm/send',
             body: {
                 "to": token,
                 "data": {
