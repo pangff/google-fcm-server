@@ -43,7 +43,7 @@ routes.push({
 
 
 /**
- * 获取举报列表
+ * vapId发送
  */
 routes.push({
     meta: {
