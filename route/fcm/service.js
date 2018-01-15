@@ -19,7 +19,12 @@ webpush.setVapidDetails(
 
 Service.sendVapIdMessage=(pushSubscription)=>{
     console.log(pushSubscription)
-    return webpush.sendNotification(pushSubscription, 'Your Push Payload Text').catch((e)=>{
+    return webpush.sendNotification(pushSubscription, 'Your Push Payload Text',{
+        headers: {
+            'Authorization': 'key='+config.key,
+            'Content-Type': 'application/json'
+        }
+    }).catch((e)=>{
         console.error(e)
         return Promise.reject(e);
     })
